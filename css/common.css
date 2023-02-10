@@ -1,0 +1,315 @@
+@charset "utf-8";
+@import './font.css';
+
+/* 초기화 */
+* {
+        box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+dl,
+dd,
+input {
+        margin: 0;
+        padding: 0;
+}
+
+li {
+        list-style: none;
+}
+
+address {
+        font-style: normal;
+}
+
+a {
+        text-decoration: none;
+}
+
+.hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin-left: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+}
+
+/* 웹폰트 */
+body {
+        font-family: 'GmarketSansMedium';
+}
+
+/* 헤더 */
+#header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        font-family: 'GmarketSansMedium';
+        border-bottom: 1px solid #000;
+        overflow: hidden;
+        position: fixed;
+}
+
+#header .logo {
+        
+        position: absolute;
+        top: 20px;
+        left: 100px;
+}
+
+.topMenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+}
+
+#language {margin: 13px 15px;}
+#language dd { color: #000; width:150px; height: 50px; background: #fff;
+        box-shadow: 3px 3px #350c0c, 3px 3px #350c0c;}
+#language dd:not(:first-of-type) {display: none;}
+#language dd:first-of-type{ border-radius: 8px; background: #fff url(../images/lang-kr.png) no-repeat 12px center;}
+#language dd a{ display:block; color: #000; line-height: 50px;
+                text-align: right; padding-right: 30px; font-size: 20px;}
+#landguage dd:nth-of-type(2){ background: url(../images/lang-en.png) no-repeat 12px center; }
+#landguage dd:nth-of-type(3){  background: url(../images/lang-vn.png) no-repeat 12px center;}
+
+
+.goFranchise {display: block; width: 200px; height: 50px; 
+              background: #ac162c url(../images/icon_store.png) no-repeat 10px center / 30px; border-radius: 8px; 
+              box-shadow: 3px 3px #350c0c, 3px 3px #350c0c;
+              color: #ffffff; font-size: 22px; padding-right: 20px;  
+              margin: 13px 30px 0 0; line-height: 55px;
+              text-indent: 70px; 
+              transition: 0.3s;}
+.goFranchise:hover { background-color: #ffffff; color: #ac162c; filter: none;} 
+/* gnb */
+#gnb { }
+
+#gnbList {
+        font-family: 'Bebas Neue';
+        display : flex ; 
+        text-transform: uppercase;
+}
+
+#gnbList>li {}
+
+#gnbList>li>a {padding: 0 35px; color:#fff; font-size: 27px;
+line-height: 80px;}
+
+.snb { text-align: center; padding: 20px 0;}
+
+.snb li { line-height: 40px;}
+
+.snb li a {color: #000;}
+
+/* 본문시작 */
+main>section {
+        height: 100vh; min-height: 700px;
+}
+
+/* 이벤트 */
+#event {
+        /* background: linear-gradient(45deg, #f7eedb, #fff); */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        /* background: #f7eedb; */
+        /* background-image: url(../images/bg_event.png); 
+        background-repeat: no-repeat ;
+        background-position: calc(50% - 300px) calc(50% + 70px) ;
+        background-size: 1000px; */
+        background: url(../images/bg_event.png) no-repeat calc(50% - 300px) calc(50% + 70px) /  1000px, linear-gradient(45deg, #f7eedb, #fbcc9a) ;
+        
+}
+
+#event dl {
+        position: relative;
+        /* top: 50px; */
+        transform: translateX(60%);
+}
+
+#event dl dt {
+    font-family: 'GmarketSansBold';
+        padding-top: 30px;
+        font-size: 90px;
+        line-height: 1em;
+        margin: 30px 0 30px;
+        color: #402615;
+}
+#event dl dt span{
+        color:  #f7eedb;
+        text-shadow: 1px 0  #402615,
+                     0 1px  #402615,
+                     -1px 0  #402615,
+                     0 -1px  #402615
+        ;
+}
+#event dl dd {
+        margin-left: 10px;
+        color:  #402615;
+}
+
+#event dl dd:first-of-type {
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        border-bottom: 1px solid #000;
+}
+/* 모든 섹션 공통 바로가기 */
+section h2, section h3 {text-transform: uppercase;}
+.goLink{ display:block; width: 410px; height: 65px; background: #ac162c; color:#fff;
+        border-radius: 6px; text-indent: 40px; line-height: 65px; font-size: 20px;
+        /* font: 20px / 67px / 'fontName'*/}
+/* store */
+#store {display: flex;}
+/* store 공통 */
+#store .storeInner{position: relative; }
+#store>section{width:50%; height: 100vh; 
+    width: 60%; display: flex; align-items: center; justify-content: center; height: 100vh;}
+#store h3{ }
+#store p{ font-size: 70px; font-family: 'GmarketSansLight'; margin: 40px 0 ;}
+#store p span{ font-family: 'GmarketSansBold';}
+
+/* newstore */
+#newStore{ background-color: #ac162c; color: #fff; line-height: 80px;}
+#newStore .storeInner{ float: right;}
+#newStore .goLink{ background: #000;}
+
+/* storesearch */
+#storeSearch{ background-color:#ffffff; color: #ac162c;}
+.storeName{ display: block; width: 410px; height: 60px; border: 5px solid #ac162c; border-radius: 5px;
+            font-weight: 700; padding: 10px 50px 10px 20px; position: relative;}
+.storeName::placeholder { color: #ac162c; font-size: 20px;}
+.searchBtn{ position: absolute; bottom: 25px; left: 350px; background-image: url(../images/btn_search.png);}
+
+/* menu */
+#menu{ background: #f1ece8;
+display: flex;
+justify-content: center; 
+align-items: center;
+background-image: url(../images/bg_menuSection2.jpg) ;
+background-repeat: no-repeat;
+color: #ac162c;
+}
+#menu .menuInner{
+    transform: translateX(-50%);
+}
+#menu .pInner{ margin: 30px 0 ;}
+#menu p{
+    font-family: 'GmarketSansLight';
+    font-size: 70px;
+    line-height: 75px;
+}
+#menu span{
+    font-family: 'GmarketSansBold';
+}
+/* coupon */
+#coupon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg_mobile.png) no-repeat left center, 
+    url(../images/bg_mobile_pattern.gif) cover ;
+}
+#coupon a{ display: block;
+    transform: translateX(70%);
+    text-align: right;
+    color: #000;
+
+}
+#coupon a h2 {font-size: 18px;  }
+#coupon h2{
+    margin-bottom: 30px;
+}
+#coupon p{
+    font-family: 'GmarketSansLight';
+    font-size: 70px;
+    line-height: 76px;
+}
+#coupon .pInner { margin: 50px 0 ;}
+#coupon span:nth-of-type(1){color: #ac162c;}
+#coupon span:nth-of-type(2){
+    font-family: 'GmarketSansMedium';
+}
+/* community */
+#community {
+    background: #F2F2F5;
+    height: 100vh;
+
+}
+#community h2{ font-size:18px ; padding: 150px 0 30px 100px; }
+#community p{ font-size: 70px; font-family: 'GmarketSansLight';
+        padding: 0 0 30px 100px;}
+#community p span{ font-family: 'GmarketSansBold';}
+#communityList{ display: flex; justify-content: space-evenly;}
+#communityList li{width: 19%; }
+#communityList li a { color: #000; }
+#communityList li a dl  { position: relative;
+        background:#fff; padding: 60px 15px 15px ; }
+#communityList li a dt {margin-bottom:20px;font-family: 'GmarketSansMedium'; }
+#communityList li a dd { }
+#communityList li a dd img { width: 100%;}
+#communityList li a dd.sns { position: absolute; top: 20px ; left:20px; font-size: 13px;}
+/* 채용정보 */
+#incruit{}
+#incruit p:first-of-type{}
+#incruit p:last-of-type{}
+#incruit p:last-of-type span{}
+
+/* quickMenu */
+#quickMenu{ position: fixed; top: 200px; right: 20px;}
+#quickMenu ul{ }
+#quickMenu ul li{width: 80px; height: 140px; border-radius: 5px; text-align: center; font-size: 13px;
+        margin-top: 3px;}
+#quickMenu ul li.quick1{background:rgba(0, 0, 0, 0) ; height: 154px;}
+#quickMenu ul li.quick2{background: #ac162c;}
+#quickMenu ul li.quick3{background:#000 ;}
+#quickMenu ul li a img{}
+
+/* online */
+.request{height: 80px; background:#B7162F; text-align: center; line-height:90px ;}
+.request a{ color: #fff; font:30px 'GmarketSansMedium';}
+
+/* footer */
+#footer{ display: flex; justify-content: space-around;
+        background:#282828; color:#ccc; font-family: 'GmarketSansMedium';}
+#footer ul{ padding: 50px 0;  display: flex;}
+#footer ul li{ }
+#footer ul li a{ color: #fff; 
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+                font-size: 12px; margin: 0 10px; 
+        }
+                   
+#footer p{margin: 24px 0 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+#footer img{
+        display: absolute;top: 20px;
+        width: 188px; height: 24px;
+}
+#footer .info1{
+
+    font-size: 13px;
+    line-height: 22px;
+    color: #707070;
+    text-transform:uppercase;
+}
+#footer small{font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+#footer select{ }
+#footer select option{ }

@@ -1,150 +1,196 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>죠스떡볶이</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>죠스떡볶이</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/media.css">
 </head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  </style>
+  
 <body>
- <header>
-    <h1>죠스떡볶이</h1>
-    <dl>
-        <dt>언어선택</dt>
+  <header id="header">
+    <h1 class="logo"><a href="#">
+      <img src="./images/logo1.png">
+    </a></h1>
+    <div class="topMenu">
+      <dl id="language">
+        <dt class="hidden">언어선택</dt>
         <dd><a href="#" title="한국어">KR</a></dd>
         <dd><a href="#" title="영어">US</a></dd>
         <dd><a href="#" title="베트남어">VN</a></dd>
-    </dl>
-    <a href="#" title="프랜차이즈사이트이동">프랜차이즈</a>
-    <nav>
-        <h2>죠스떡볶이 주 이용메뉴</h2>
-       <ul>
-        <li><a href="#">brand</a></li>
-        <li><a href="#">menu</a></li>
-        <li><a href="#">store</a></li>
-        <li><a href="#">community</a></li>
-       </ul>
+      </dl>
+      <a href="#" class="goFranchise">프랜차이즈</a>
+    </div>
+    <nav id="gnb">
+      <h2 class="hidden">죠스떡볶이 주요이용메뉴</h2>
+      <ul id="gnbList">
+        <li><a href="#">brand</a>
+          <ul class="snb">
+            <li><a href="#">대표인사말</a></li>
+            <li><a href="#">죠스이야기</a></li>
+            <li><a href="#">채용정보</a></li>
+          </ul>
+        </li>
+        <li><a href="#">menu</a>
+          <ul class="snb">
+            <li><a href="#">메인메뉴</a></li>
+            <li><a href="#">세트메뉴</a></li>
+            <li><a href="#">사이드메뉴</a></li>
+          </ul>
+        </li>
+        <li><a href="#">store</a>
+          <ul class="snb">
+            <li><a href="#">매장 찾기</a></li>
+            <li><a href="#">매장 안내</a></li>
+          </ul>
+        </li>
+        <li><a href="#">community</a>
+          <ul class="snb">
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">고객의 소리</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
- </header>
- <!-- ad -->
- <section>
-    <h2>신메뉴 소개</h2>
-    <dl>
-        <dt>버섯크림떡볶이</dt>
+  </header>
+  <main>
+    <section id="event">
+      <h2 class="hidden">신메뉴 소개</h2>
+      <dl class="newMenu">
+        <dt><span>버섯크림</span><br>떡볶이</dt>
         <dd>풍미가득~ 부드러운</dd>
-        <dd>표고버섯의 진한 향과 베이컨의 고소함이 어우러진<br>고품격 버섯 크림 떡볶이입니다. </dd>
-    </dl>
-
- </section>
- <!-- store -->
- <section>
-    <h2>store</h2>
-    <section>
-        <h3>new store</h3>
-        <p>죠스떡볶이<br> 새 매장을<br> 소개합니다.</p>
-        <a href="#">죠스떡볶이 새 매장 만나기</a>
+        <dd>표고버섯의 진한 향과 베이컨의 고소함이 어우러진<br>
+          고품격 버섯 크림 떡볶이입니다.</dd>
+      </dl>
     </section>
-    <section>
-        <h3>store search</h3>
-        <p>죠스떡볶이<br> 매장,<br>어디있죠!?</p>
-        <input type="text" placeholder="가까운 지역명을 검색하세요">
-        <input type="button" value="검색">
+    <section id="store">
+      <h2 class="hidden">store</h2>
+      <section id="newStore">
+        <div class="storeInner">
+          <h3>new store</h3>
+          <p>죠스떡볶이 <br><span>새 매장을 <br>소개합니다</span></p>
+          <a href="#" class="goLink">죠스떡볶이 새 매장 만나기</a>
+        </div>
+      </section>
+      <section id="storeSearch">
+        <div class="storeInner">
+          <h3>store search</h3>
+          <p>죠스떡볶이 <br><span>매장, <br>어디있죠!?</span></p>
+          <input type="text" class="storeName" placeholder="가까운 지역명을 입력하세요">
+          <input type="button" value="검색" class="searchBtn">
+        </div>
+      </section>
     </section>
- </section>
- <!-- menu -->
- <section>
-    <h2>menu</h2>
-    <h3>jaws menu</h3>
-    <p>오늘 죠스에서<br> 뭘 먹을까?</p>
-    <a href="#">죠스떡볶이 전체메뉴 보기</a>
- </section>
- <!-- coupon -->
- <section>
-    <a href="#">
-        <h2>jaws coupon</h2>
-        <p>배달도 되고,<br>선물도 됩니다.<br>죠스떡볶이.</p>
-    </a>
- </section>
- <!-- community -->
- <section>
-    <h2>jaws community</h2>
-    <p>죠스는 항상 즐겁습니다.</p>
+    <section id="menu">
+      <div class="menuInner">
+        <h2 class="hidden">menu</h2>
+        <h3>jaws menu</h3>
+        <div class="pInner">
+        <p>오늘 죠스에서 <br><span>뭘 먹을까?</span></p></div>
+        <a href="#" class="goLink">죠스떡볶이 전체메뉴 보기</a>
+      </div>
+    </section>
+    <section id="coupon">
+      <a href="#">
+        <h2>jaws mobile coupon</h2>
+        <div class="pInner">
+        <p>배달도 되고, <br><span>선물도 됩니다.</span><br><span>죠스떡볶이.</span></p></div>
+      </a>
+    </section>
+    <section id="community">
+      <h2>jaws coummunity</h2>
+      <p>죠스는 항상<span> 즐겁습니다</span></p>
+      <ul id="communityList">
+        <li>
+          <a href="#">
+            <dl>
+              <dt>죠스떡볶이 14주년 감사이벤트</dt>
+              <dd class="sns">facebook</dd>
+              <dd><img src="./images/14주년.png" alt=" 14주년 감사이벤트"></dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt>죠스떡볶이 14주년 감사이벤트</dt>
+              <dd class="sns">facebook</dd>
+              <dd><img src="./images/14주년.png" alt=" 14주년 감사이벤트"></dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt>죠스떡볶이 14주년 감사이벤트</dt>
+              <dd class="sns">facebook</dd>
+              <dd><img src="./images/14주년.png" alt=" 14주년 감사이벤트"></dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt>죠스떡볶이 14주년 감사이벤트</dt>
+              <dd class="sns">facebook</dd>
+              <dd><img src="./images/14주년.png" alt=" 14주년 감사이벤트"></dd>
+            </dl>
+          </a>
+        </li>
+        <li><a href="#">
+            <dl>
+              <dt>죠스떡볶이 14주년 감사이벤트</dt>
+              <dd class="sns">facebook</dd>
+              <dd><img src="./images/14주년.png" alt=" 14주년 감사이벤트"></dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="incruit">
+      <h2 class="hidden">brand</h2>
+      <h3 class="hidden">채용정보</h3>
+      <p>jaws people</p>
+      <p>죠스와 함께 할 <br><span>당신을 <br>모십니다.</span></p>
+      <a href="#" class="goLink">죠스떡볶이 채용정보 보기</a>
+    </section>
+  </main>
+  <aside id="quickMenu">
+    <h2 class="hidden">창업, 가맹상담, 고객의 소리</h2>
     <ul>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
-        <li><a href="#">
-            <dl>
-                <dt>죠스떡볶이 14주년 감사이벤트</dt>
-                <dd>facebook</dd>
-                <dd><img src="#" alt="죠스 14주년 이벤트"></dd>
-            </dl>
-        </a></li>
+      <li class="quick1"><a href="tel:1688-2868"><img src="./images/qk-aside1.png"></a></li>
+      <li class="quick2"><a href="#"><img src="./images/qk-aside2.png"></a></li>
+      <li class="quick3"><a href="#"><img src="./images/qk-aside3.png"></a></li>
     </ul>
- </section>
- <!-- story -->
- <section>
-    <h2>brand</h2>
-    <h3>채용정보</h3>
-    <p>jaws people</p>
-    <p>죠스와 함께 할 <br> 당신을 <br> 모십니다.</p>
-    <a href="#">죠스떡볶이 채용정보 보기</a>
- </section>
- <aside>
-    <h2>창업, 가맹상담, 고객의 소리</h2>
-    <ul>
-        <li><a href="tel:1688-2868">창업문의<br>1688-2868</a></li>
-        <li><a href="#">고객의<br>소리</a></li>
-        <li><a href="#">가맹 상담<br> 신청</a></li>
-    </ul>
- </aside>
- <p><a href="#">온라인 신청하기</a></p>
- <footer>
-    <p>jawsfood</p>
-    <ul>
-        <li><a href="#">채용안내</a></li>
-        <li><a href="#">개인정보처리방침</a></li>
-        <li><a href="#">이용약관</a></li>
-        <li><a href="#">사이트맵</a></li>
-    </ul>
+  </aside>
+  <a href="#"> <p class="request">온라인 신청하기</p></a>
+  <footer id="footer">
+    <img src="./images/footer_logo.png">
+    <div class="info1">
+    <small> copyright (c)jawsfood all rights reserved.</small>
     <p>대표이사 나상균 / 사업자등록번호 209-81-54096 / 서울특별시 언주로 147길 20</p>
-        <small> copyright (C) jawsfood all rights reserved.</small>
+  </div>
+    <div class="info2">
+    <ul>
+      <li><a href="#">채용안내</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">사이트맵</a></li>
+    </ul> 
     <select>
-        <option>Family Site </option>
-        <option value="https://www.teacherkim.co.kr/">바르다김선생</option>
+      <option>Family Site</option>
+      <option value="https://www.teacherkim.co.kr/">바르다김선생</option>
     </select>
- </footer>
+  </div>
+  
+   
+  </footer>
 </body>
+
 </html>
