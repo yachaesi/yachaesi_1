@@ -61,6 +61,7 @@ body {
         border-bottom: 1px solid #000;
         overflow: hidden;
         position: fixed;
+        z-index: 999;
 }
 
 #header .logo {
@@ -97,15 +98,15 @@ body {
               transition: 0.3s;}
 .goFranchise:hover { background-color: #ffffff; color: #ac162c; filter: none;} 
 /* gnb */
-#gnb { }
+.gnbView {display: none;}
+/* gnbView span:not(.hidden) 도 가능하다. */
 
+/* .gnbView span:last-of-type{content: ""; display:block;  width: 40px; height: 3px; background: #000; position: absolute; top: 22px; left: 4px;} */
 #gnbList {
         font-family: 'Bebas Neue';
         display : flex ; 
         text-transform: uppercase;
 }
-
-#gnbList>li {}
 
 #gnbList>li>a {padding: 0 35px; color:#fff; font-size: 27px;
 line-height: 80px;}
@@ -195,7 +196,7 @@ section h2, section h3 {text-transform: uppercase;}
 .storeName{ display: block; width: 410px; height: 60px; border: 5px solid #ac162c; border-radius: 5px;
             font-weight: 700; padding: 10px 50px 10px 20px; position: relative;}
 .storeName::placeholder { color: #ac162c; font-size: 20px;}
-.searchBtn{ position: absolute; bottom: 25px; left: 350px; background-image: url(../images/btn_search.png);}
+
 
 /* menu */
 #menu{ background: #f1ece8;
@@ -282,7 +283,7 @@ color: #ac162c;
 #quickMenu ul li a img{}
 
 /* online */
-.request{height: 80px; background:#B7162F; text-align: center; line-height:90px ;}
+.request{height: 80px; background:#B7162F; text-align: center; line-height:90px ; color: #fff;font:30px}
 .request a{ color: #fff; font:30px 'GmarketSansMedium';}
 
 /* footer */
